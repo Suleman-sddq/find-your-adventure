@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-bar {
+  position: absolute;
+  width: 55%;
+  margin: 20px 21%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  color: aliceblue;
+  padding: 1rem 0;
+  z-index: 10;
+}
+.logo img {
+  width: 50%;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: aliceblue;
+}
+.burger {
+  cursor: pointer;
+  display: none;
+}
+.burger div {
+  width: 20px;
+  height: 2px;
+  background-color: aliceblue;
+  margin: 5px;
+}
+
+@media screen and (max-width: 580px) {
+  body {
+    overflow-x: hidden;
+  }
+  /* navbar */
+  .nav-links {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(138, 43, 226, 0.5);
+    justify-content: space-around;
+    width: 200%;
+    height: 100vh;
+    right: -1000px;
+    top: 60px;
+    height: 500px;
+    align-items: center;
+    transition: right 0.5s ease-in;
+  }
+  .nav-links li {
+    margin: 40px;
+    opacity: 1;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+.nav-active {
+  right: -135px;
+}
+/* hero section */
+.tint {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(65, 18, 141);
+  opacity: 0.7;
+  z-index: 1;
+}
+.hero {
+  position: relative;
+  background-image: url(images/header-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  color: aliceblue;
+  /* overflow: hidden; */
+}
+.hero::after {
+  content: "";
+  background-image: url(images/wave-large.png);
+  padding: 0;
+  background-size: auto;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+}
+.heroContainer {
+  padding: 10% 10% 0px 20%;
+  position: relative;
+  width: 80%;
+  z-index: 5;
+  /* margin: auto; */
+}
+.heroContainer h1 {
+  padding-bottom: 15px;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.heroContainer h3 {
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 3px;
+  /* margin-top: 10%; */
+}
+
+@media screen and (max-width: 980px) {
+  .heroContainer h3 {
+    margin-top: 40px;
+  }
+}
+.heroContainer p {
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+.heroButton {
+  border: 1px solid rgb(228, 100, 179);
+  border-radius: 30px;
+  display: inline-block;
+  width: 120px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 5%;
+  text-transform: uppercase;
+  font-size: 12px;
+  background-color: rgb(228, 100, 179);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+}
+.heroButton:hover {
+  background-color: rgb(201, 65, 149);
+}
+/* ACTIVITY */
+.activityContainer {
+  width: 70%;
+  min-height: 500px;
+  margin: 20px auto;
+  position: relative;
+  color: rgb(104, 103, 103);
+}
+.activityContainer p {
+  text-transform: lowercase;
+  font-size: 15px;
+}
+.experience {
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.experience h1 {
+  margin: 10px auto;
+}
+.activityImagesContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.activityImg {
+  position: relative;
+  flex-basis: 300px;
+  height: 400px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px 25px 10px;
+  margin: 10px 5px;
+  color: azure;
+  z-index: 2;
+}
+.activityImg::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    135deg,
+    rgba(90, 22, 153, 0.5) 0%,
+    rgba(138, 44, 226, 0.9) 100%
+  );
+  z-index: -1;
+}
+.activityImg i {
+  font-size: 40px;
+  color: rgb(228, 100, 179);
+}
+.activityImg h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.activityContainer {
+}
+/* .activityContainer::after {
+  content: "";
+  background-image: url(/images/wave-large-reversed.png);
+  padding: 0;
+  background-size: auto;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 200px;
+  z-index: 6;
+  bottom: -180px;
+  width: 100%;
+} */
+/* TESTIMONIAL */
+.testimonial::before {
+  position: absolute;
+  content: "";
+  background-image: url(images/wave-large-reversed.png);
+  padding: 0;
+  background-size: auto;
+  background-repeat: no-repeat;
+  height: 200px;
+  z-index: 6;
+  width: 100%;
+}
+.activityImg1 {
+  background: url(images/stars.jpg) center no-repeat;
+}
+.activityImg2 {
+  background: url(images/hiking.jpg) center no-repeat;
+}
+.activityImg3 {
+  background: url(images/camping.jpg) center no-repeat;
+}
+.testimonial {
+  background: url(images/testimonials-bg.jpg) center no-repeat fixed;
+  width: 100%;
+  height: 750px;
+  overflow: hidden;
+  position: relative;
+  z-index: -2;
+}
+.testContainer {
+  width: 100%;
+  height: 100%;
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: aliceblue;
+}
+.testComment {
+  position: relative;
+}
+.testComment i {
+  color: rgba(228, 100, 179, 0.7);
+  position: absolute;
+  top: -140px;
+  left: 180px;
+  width: 100%;
+  height: 100%;
+  font-size: 100px;
+}
+.testCustomer {
+  text-align: center;
+}
+.customerImg {
+  width: 30%;
+  border-radius: 50%;
+  border: 2px solid rgb(228, 100, 179);
+  margin: 20px auto;
+}
+.testimonial::after {
+  content: "";
+  background-image: linear-gradient(
+    135deg,
+    rgba(90, 22, 153, 0.5) 0%,
+    rgba(138, 44, 226, 0.9) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* beginAdventure */
+.beginAdventure {
+  color: rgb(104, 103, 103);
+}
+.titleHeading {
+  width: 60%;
+  text-align: center;
+  margin: 30px auto;
+}
+.titleHeading h1,
+.titleHeading h3 {
+  text-transform: uppercase;
+}
+.titleHeading h1 {
+  margin-bottom: 20px;
+}
+.adventureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  /* text-align: center; */
+  margin: auto 50px;
+}
+.adventureGridItem {
+  padding: 10px 30px;
+}
+.button {
+  display: inline-block;
+  border: 1px solid rgb(228, 100, 179);
+  border-radius: 2rem;
+  padding: 10px;
+  text-transform: uppercase;
+  color: aliceblue;
+  background-color: rgb(228, 100, 179);
+  margin: 30px 80px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+}
+.button:hover {
+  background-color: rgb(201, 65, 149);
+}
+footer {
+  text-align: center;
+  color: rgb(104, 103, 103);
+  background-color: rgb(219, 217, 217);
+  padding: 1rem 0;
+}
