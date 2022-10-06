@@ -4,17 +4,19 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .nav-bar {
-  position: absolute;
-  width: 55%;
-  margin: 20px 21%;
+  position: fixed;
+  background-color: rgba(138, 43, 226, 0.8);
+  width: 100%;
+  padding: 20px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  height: 80px;
   color: aliceblue;
-  padding: 1rem 0;
   z-index: 10;
 }
 .logo img {
@@ -23,7 +25,7 @@
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 30%;
+  width: auto;
 }
 .nav-links li {
   list-style: none;
@@ -56,13 +58,13 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    background-color: rgba(138, 43, 226, 0.5);
+    background-color: rgba(138, 43, 226, 0.8);
     justify-content: space-around;
-    width: 200%;
-    height: 100vh;
-    right: -1000px;
-    top: 60px;
-    height: 500px;
+    width: 100%;
+    height: 90vh;
+    right: -1200px;
+    top: 50px;
+    margin: 30px 0px;
     align-items: center;
     transition: right 0.5s ease-in;
   }
@@ -73,10 +75,12 @@
 
   .burger {
     display: block;
+    top: 30px;
+    right: 50px;
   }
 }
 .nav-active {
-  right: -135px;
+  right: 0px;
 }
 /* hero section */
 .tint {
